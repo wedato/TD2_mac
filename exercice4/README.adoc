@@ -1,0 +1,20 @@
+_**Alertes gestion des stocks**_
+
+
+Nous voulons mettre en place une classe qui permettra de logger toutes les ruptures de stocks iminentes.
+Un fois que le réapprovisionnement est fait, les alertes devront alors être désactivée. Il faut imaginer que
+devant chaque type de produits, nous aurions un feu qui serait vert si notre produit est disponible en quantité suffisante (valeur arbitraire mais paramètrable),
+orange si on se rapproche du seuil critique (la rupture) et rouge quand nous n'avons plus rien en stock.
+
+Nous voulons qu'à chaque opération sur le stock, notre gestionnaire soit mis à jour.
+
+
+*Question*
+
+Développez un programme avec un gestionnaire qui doit être complètement indépendant du stock.
+Tout ce que ce gestionnaire sait c'est : quels produits il gère et quelles sont les valeurs limites.
+A chaque opération, un item du stock devra informé ce gestionnaire en lui envoyant le stock mis à jour après l'opération.
+Le gestionnaire, en fonction de l'item et de la valeur, mettra à jour le feu correspondant si besoin.
+On aura une classe FacadeStock et une classe Gestionnaire. La façade nous permettra de faire toutes les opérations classiques
+sur un stock : MAJ du stock d'une référence, ajout d'une référence, retrait d'une référence, ...
+

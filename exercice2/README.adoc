@@ -1,0 +1,29 @@
+_Livraison_
+
+Nous voulons modéliser un système de livraison de colis. Un client
+dépose (méthode _deposerColis_) un Colis à livrer dans le Système de
+Livraison. Lorsqu’un livreur est disponible, il appelle l’opération
+_retirerColis_, le système choisit aléatoirement un colis à livrer__.__
+Le colis ainsi récupéré apparaît alors comme en livraison.
+
+Deux cas de figure peuvent ensuite se produire :
+
+Si la livraison se passe bien, le livreur appelle l’opération
+_livraisonEffectuee_ ; dans ce cas, le colis apparaît comme livré.
+
+Si le destinataire est absent, le livreur redépose le colis en appelant
+l’opération _destinataireAbsent_ ; dans ce cas, le colis sera repris
+plus-tard par un autre livreur.
+
+On doit pouvoir à tout moment dans le système afficher l’ensemble des
+colis à livrer, en livraison et déjà livrés.
+
+a.  Quel(s) patron(s) de conception sont intéressant(s) pour représenter
+ce problème ? Justifiez.
+b.  Donnez le diagramme de classes correspondant et implémentez votre solution.
+c.  Ecrivez l’implémentation en Java d’un programme principal
+(uniquement le main) qui exécute le scénario suivant : deux clients
+déposent chacun un colis, un livreur retire un des colis, retourne ce
+colis pour cause de destinataire absent, un autre livreur retire un
+colis et prévient que la livraison a bien été effectuée. Entre chaque
+étape, on affiche l’état du système.
