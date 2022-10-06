@@ -1,11 +1,15 @@
 package mare;
 
+import monitoring.Observer;
+import monitoring.Sujet;
 import poissons.Poisson;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
-public class Mare {
+public class Mare  {
+
 
     /**
      * Tous les poissons concernés par cette mare
@@ -68,4 +72,7 @@ public class Mare {
     public Collection<Poisson> getPoissons() {
         return poissons;
     }
+
+
+
 }

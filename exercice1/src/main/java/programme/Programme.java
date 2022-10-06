@@ -32,6 +32,7 @@ public class Programme {
         Grenade grenade = new Grenade(20,25,20);
 
         Collection<Poisson> morts = facadeMare.lancerGrenade(grenade);
+        facadeMare.displayMoniteur();
         System.out.println("Nombres de morts : "+ morts.size());
 
     }

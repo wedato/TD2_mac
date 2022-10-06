@@ -1,7 +1,7 @@
 _Livraison_
 
 Nous voulons modéliser un système de livraison de colis. Un client
-dépose (méthode _deposerColis_) un Colis à livrer dans le Système de
+dépose (méthode _deposerColis_) un modele.Colis à livrer dans le Système de
 Livraison. Lorsqu’un livreur est disponible, il appelle l’opération
 _retirerColis_, le système choisit aléatoirement un colis à livrer__.__
 Le colis ainsi récupéré apparaît alors comme en livraison.

@@ -1,6 +1,9 @@
 package facade;
 
 import mare.Mare;
+import monitoring.MonitoringMort;
+import monitoring.Observer;
+import monitoring.TypeEvenement;
 import poissons.Poisson;
 
 import java.util.ArrayList;
@@ -12,8 +15,7 @@ public class FacadeMare {
      * La mare gérée par la façade
      */
     private Mare maMare;
-
-
+    private MonitoringMort monitoring;
     /**
      * L'animation de la mare est lancée dans un thread
      */
@@ -44,6 +46,11 @@ public class FacadeMare {
                 maMare.majPositionPoissons();
             }
         });
+        this.monitoring = new MonitoringMort(nbPoissons);
+        for(Poisson poisson : this.maMare.getPoissons())
+            poisson.inscrire(monitoring, TypeEvenement.MORT);
+
+
     }
 
     /**
@@ -82,6 +89,10 @@ public class FacadeMare {
 
     public Collection<Poisson> lancerGrenade(Grenade grenade) {
         return grenade.exploser(this.maMare);
+    }
+
+    public void displayMoniteur(){
+        this.monitoring.display();
     }
 
 
